@@ -9,12 +9,22 @@
 /* Begin PBXBuildFile section */
 		3A3D21B11BBAB67700A7D98C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D21B01BBAB67700A7D98C /* main.m */; };
 		3A3D21B41BBAB67700A7D98C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D21B31BBAB67700A7D98C /* AppDelegate.m */; };
-		3A3D21B71BBAB67700A7D98C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D21B61BBAB67700A7D98C /* ViewController.m */; };
+		3A3D21B71BBAB67700A7D98C /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D21B61BBAB67700A7D98C /* HomeViewController.m */; };
 		3A3D21BA1BBAB67700A7D98C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A3D21B81BBAB67700A7D98C /* Main.storyboard */; };
 		3A3D21BC1BBAB67700A7D98C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A3D21BB1BBAB67700A7D98C /* Assets.xcassets */; };
 		3A3D21BF1BBAB67700A7D98C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A3D21BD1BBAB67700A7D98C /* LaunchScreen.storyboard */; };
 		3A3D21CA1BBAB67700A7D98C /* BeaconTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D21C91BBAB67700A7D98C /* BeaconTests.m */; };
 		3A3D21D51BBAB67700A7D98C /* BeaconUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D21D41BBAB67700A7D98C /* BeaconUITests.m */; };
+		3A3D21E51BBAB76900A7D98C /* DetailBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D21E41BBAB76900A7D98C /* DetailBeaconViewController.m */; };
+		3A3D21E71BBABAD300A7D98C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A3D21E61BBABAD300A7D98C /* CoreLocation.framework */; };
+		3A3D21EE1BBABBE800A7D98C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A3D21EC1BBABBE800A7D98C /* Interface.storyboard */; };
+		3A3D21F01BBABBE800A7D98C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A3D21EF1BBABBE800A7D98C /* Assets.xcassets */; };
+		3A3D21F71BBABBE800A7D98C /* BeaconWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3A3D21F61BBABBE800A7D98C /* BeaconWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3A3D21FF1BBABBE800A7D98C /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D21FE1BBABBE800A7D98C /* InterfaceController.m */; };
+		3A3D22021BBABBE900A7D98C /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D22011BBABBE900A7D98C /* ExtensionDelegate.m */; };
+		3A3D22051BBABBE900A7D98C /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D22041BBABBE900A7D98C /* NotificationController.m */; };
+		3A3D22071BBABBE900A7D98C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A3D22061BBABBE900A7D98C /* Assets.xcassets */; };
+		3A3D220B1BBABBE900A7D98C /* BeaconWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 3A3D21EA1BBABBE800A7D98C /* BeaconWatch.app */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,15 +42,54 @@
 			remoteGlobalIDString = 3A3D21AB1BBAB67700A7D98C;
 			remoteInfo = Beacon;
 		};
+		3A3D21F81BBABBE800A7D98C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A3D21A41BBAB67600A7D98C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A3D21F51BBABBE800A7D98C;
+			remoteInfo = "BeaconWatch Extension";
+		};
+		3A3D22091BBABBE900A7D98C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A3D21A41BBAB67600A7D98C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A3D21E91BBABBE800A7D98C;
+			remoteInfo = BeaconWatch;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3A3D220F1BBABBE900A7D98C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3A3D21F71BBABBE800A7D98C /* BeaconWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A3D22131BBABBE900A7D98C /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				3A3D220B1BBABBE900A7D98C /* BeaconWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3A3D21AC1BBAB67700A7D98C /* Beacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A3D21B01BBAB67700A7D98C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3A3D21B21BBAB67700A7D98C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3A3D21B31BBAB67700A7D98C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3A3D21B51BBAB67700A7D98C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3A3D21B61BBAB67700A7D98C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3A3D21B51BBAB67700A7D98C /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		3A3D21B61BBAB67700A7D98C /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		3A3D21B91BBAB67700A7D98C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A3D21BB1BBAB67700A7D98C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A3D21BE1BBAB67700A7D98C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +100,23 @@
 		3A3D21D01BBAB67700A7D98C /* BeaconUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeaconUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A3D21D41BBAB67700A7D98C /* BeaconUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeaconUITests.m; sourceTree = "<group>"; };
 		3A3D21D61BBAB67700A7D98C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A3D21E31BBAB76900A7D98C /* DetailBeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailBeaconViewController.h; sourceTree = "<group>"; };
+		3A3D21E41BBAB76900A7D98C /* DetailBeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailBeaconViewController.m; sourceTree = "<group>"; };
+		3A3D21E61BBABAD300A7D98C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3A3D21EA1BBABBE800A7D98C /* BeaconWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaconWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A3D21ED1BBABBE800A7D98C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		3A3D21EF1BBABBE800A7D98C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3A3D21F11BBABBE800A7D98C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A3D21F61BBABBE800A7D98C /* BeaconWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BeaconWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A3D21FC1BBABBE800A7D98C /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		3A3D21FD1BBABBE800A7D98C /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		3A3D21FE1BBABBE800A7D98C /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		3A3D22001BBABBE800A7D98C /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
+		3A3D22011BBABBE900A7D98C /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
+		3A3D22031BBABBE900A7D98C /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		3A3D22041BBABBE900A7D98C /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		3A3D22061BBABBE900A7D98C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3A3D22081BBABBE900A7D98C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A3D21E71BBABAD300A7D98C /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,15 +142,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3A3D21F31BBABBE800A7D98C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		3A3D21A31BBAB67600A7D98C = {
 			isa = PBXGroup;
 			children = (
+				3A3D21E61BBABAD300A7D98C /* CoreLocation.framework */,
 				3A3D21AE1BBAB67700A7D98C /* Beacon */,
 				3A3D21C81BBAB67700A7D98C /* BeaconTests */,
 				3A3D21D31BBAB67700A7D98C /* BeaconUITests */,
+				3A3D21EB1BBABBE800A7D98C /* BeaconWatch */,
+				3A3D21FA1BBABBE800A7D98C /* BeaconWatch Extension */,
 				3A3D21AD1BBAB67700A7D98C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,6 +171,8 @@
 				3A3D21AC1BBAB67700A7D98C /* Beacon.app */,
 				3A3D21C51BBAB67700A7D98C /* BeaconTests.xctest */,
 				3A3D21D01BBAB67700A7D98C /* BeaconUITests.xctest */,
+				3A3D21EA1BBABBE800A7D98C /* BeaconWatch.app */,
+				3A3D21F61BBABBE800A7D98C /* BeaconWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,10 +180,9 @@
 		3A3D21AE1BBAB67700A7D98C /* Beacon */ = {
 			isa = PBXGroup;
 			children = (
+				3A3D21E21BBAB6B300A7D98C /* ViewController */,
 				3A3D21B21BBAB67700A7D98C /* AppDelegate.h */,
 				3A3D21B31BBAB67700A7D98C /* AppDelegate.m */,
-				3A3D21B51BBAB67700A7D98C /* ViewController.h */,
-				3A3D21B61BBAB67700A7D98C /* ViewController.m */,
 				3A3D21B81BBAB67700A7D98C /* Main.storyboard */,
 				3A3D21BB1BBAB67700A7D98C /* Assets.xcassets */,
 				3A3D21BD1BBAB67700A7D98C /* LaunchScreen.storyboard */,
@@ -140,6 +218,51 @@
 			path = BeaconUITests;
 			sourceTree = "<group>";
 		};
+		3A3D21E21BBAB6B300A7D98C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3A3D21B51BBAB67700A7D98C /* HomeViewController.h */,
+				3A3D21B61BBAB67700A7D98C /* HomeViewController.m */,
+				3A3D21E31BBAB76900A7D98C /* DetailBeaconViewController.h */,
+				3A3D21E41BBAB76900A7D98C /* DetailBeaconViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		3A3D21EB1BBABBE800A7D98C /* BeaconWatch */ = {
+			isa = PBXGroup;
+			children = (
+				3A3D21EC1BBABBE800A7D98C /* Interface.storyboard */,
+				3A3D21EF1BBABBE800A7D98C /* Assets.xcassets */,
+				3A3D21F11BBABBE800A7D98C /* Info.plist */,
+			);
+			path = BeaconWatch;
+			sourceTree = "<group>";
+		};
+		3A3D21FA1BBABBE800A7D98C /* BeaconWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3A3D21FD1BBABBE800A7D98C /* InterfaceController.h */,
+				3A3D21FE1BBABBE800A7D98C /* InterfaceController.m */,
+				3A3D22001BBABBE800A7D98C /* ExtensionDelegate.h */,
+				3A3D22011BBABBE900A7D98C /* ExtensionDelegate.m */,
+				3A3D22031BBABBE900A7D98C /* NotificationController.h */,
+				3A3D22041BBABBE900A7D98C /* NotificationController.m */,
+				3A3D22061BBABBE900A7D98C /* Assets.xcassets */,
+				3A3D22081BBABBE900A7D98C /* Info.plist */,
+				3A3D21FB1BBABBE800A7D98C /* Supporting Files */,
+			);
+			path = "BeaconWatch Extension";
+			sourceTree = "<group>";
+		};
+		3A3D21FB1BBABBE800A7D98C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3A3D21FC1BBABBE800A7D98C /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,10 +273,12 @@
 				3A3D21A81BBAB67700A7D98C /* Sources */,
 				3A3D21A91BBAB67700A7D98C /* Frameworks */,
 				3A3D21AA1BBAB67700A7D98C /* Resources */,
+				3A3D22131BBABBE900A7D98C /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3A3D220A1BBABBE900A7D98C /* PBXTargetDependency */,
 			);
 			name = Beacon;
 			productName = Beacon;
@@ -196,6 +321,40 @@
 			productReference = 3A3D21D01BBAB67700A7D98C /* BeaconUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		3A3D21E91BBABBE800A7D98C /* BeaconWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A3D22101BBABBE900A7D98C /* Build configuration list for PBXNativeTarget "BeaconWatch" */;
+			buildPhases = (
+				3A3D21E81BBABBE800A7D98C /* Resources */,
+				3A3D220F1BBABBE900A7D98C /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A3D21F91BBABBE800A7D98C /* PBXTargetDependency */,
+			);
+			name = BeaconWatch;
+			productName = BeaconWatch;
+			productReference = 3A3D21EA1BBABBE800A7D98C /* BeaconWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		3A3D21F51BBABBE800A7D98C /* BeaconWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A3D220C1BBABBE900A7D98C /* Build configuration list for PBXNativeTarget "BeaconWatch Extension" */;
+			buildPhases = (
+				3A3D21F21BBABBE800A7D98C /* Sources */,
+				3A3D21F31BBABBE800A7D98C /* Frameworks */,
+				3A3D21F41BBABBE800A7D98C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BeaconWatch Extension";
+			productName = "BeaconWatch Extension";
+			productReference = 3A3D21F61BBABBE800A7D98C /* BeaconWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -207,6 +366,11 @@
 				TargetAttributes = {
 					3A3D21AB1BBAB67700A7D98C = {
 						CreatedOnToolsVersion = 7.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					3A3D21C41BBAB67700A7D98C = {
 						CreatedOnToolsVersion = 7.1;
@@ -215,6 +379,12 @@
 					3A3D21CF1BBAB67700A7D98C = {
 						CreatedOnToolsVersion = 7.1;
 						TestTargetID = 3A3D21AB1BBAB67700A7D98C;
+					};
+					3A3D21E91BBABBE800A7D98C = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					3A3D21F51BBABBE800A7D98C = {
+						CreatedOnToolsVersion = 7.1;
 					};
 				};
 			};
@@ -234,6 +404,8 @@
 				3A3D21AB1BBAB67700A7D98C /* Beacon */,
 				3A3D21C41BBAB67700A7D98C /* BeaconTests */,
 				3A3D21CF1BBAB67700A7D98C /* BeaconUITests */,
+				3A3D21E91BBABBE800A7D98C /* BeaconWatch */,
+				3A3D21F51BBABBE800A7D98C /* BeaconWatch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -263,6 +435,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3A3D21E81BBABBE800A7D98C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A3D21F01BBABBE800A7D98C /* Assets.xcassets in Resources */,
+				3A3D21EE1BBABBE800A7D98C /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A3D21F41BBABBE800A7D98C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A3D22071BBABBE900A7D98C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -270,7 +459,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A3D21B71BBAB67700A7D98C /* ViewController.m in Sources */,
+				3A3D21B71BBAB67700A7D98C /* HomeViewController.m in Sources */,
+				3A3D21E51BBAB76900A7D98C /* DetailBeaconViewController.m in Sources */,
 				3A3D21B41BBAB67700A7D98C /* AppDelegate.m in Sources */,
 				3A3D21B11BBAB67700A7D98C /* main.m in Sources */,
 			);
@@ -292,6 +482,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3A3D21F21BBABBE800A7D98C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A3D22021BBABBE900A7D98C /* ExtensionDelegate.m in Sources */,
+				3A3D21FF1BBABBE800A7D98C /* InterfaceController.m in Sources */,
+				3A3D22051BBABBE900A7D98C /* NotificationController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -304,6 +504,16 @@
 			isa = PBXTargetDependency;
 			target = 3A3D21AB1BBAB67700A7D98C /* Beacon */;
 			targetProxy = 3A3D21D11BBAB67700A7D98C /* PBXContainerItemProxy */;
+		};
+		3A3D21F91BBABBE800A7D98C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A3D21F51BBABBE800A7D98C /* BeaconWatch Extension */;
+			targetProxy = 3A3D21F81BBABBE800A7D98C /* PBXContainerItemProxy */;
+		};
+		3A3D220A1BBABBE900A7D98C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A3D21E91BBABBE800A7D98C /* BeaconWatch */;
+			targetProxy = 3A3D22091BBABBE900A7D98C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -322,6 +532,14 @@
 				3A3D21BE1BBAB67700A7D98C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3A3D21EC1BBABBE800A7D98C /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A3D21ED1BBABBE800A7D98C /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -412,6 +630,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Beacon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = it.midApp.Beacon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -423,6 +642,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Beacon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = it.midApp.Beacon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -477,6 +697,64 @@
 			};
 			name = Release;
 		};
+		3A3D220D1BBABBE900A7D98C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "BeaconWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = it.midApp.Beacon.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		3A3D220E1BBABBE900A7D98C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "BeaconWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = it.midApp.Beacon.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		3A3D22111BBABBE900A7D98C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = BeaconWatch_Extension;
+				INFOPLIST_FILE = BeaconWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = it.midApp.Beacon.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		3A3D22121BBABBE900A7D98C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = BeaconWatch_Extension;
+				INFOPLIST_FILE = BeaconWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = it.midApp.Beacon.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -496,6 +774,7 @@
 				3A3D21DB1BBAB67700A7D98C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A3D21DC1BBAB67700A7D98C /* Build configuration list for PBXNativeTarget "BeaconTests" */ = {
 			isa = XCConfigurationList;
@@ -504,12 +783,30 @@
 				3A3D21DE1BBAB67700A7D98C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A3D21DF1BBAB67700A7D98C /* Build configuration list for PBXNativeTarget "BeaconUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A3D21E01BBAB67700A7D98C /* Debug */,
 				3A3D21E11BBAB67700A7D98C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A3D220C1BBABBE900A7D98C /* Build configuration list for PBXNativeTarget "BeaconWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A3D220D1BBABBE900A7D98C /* Debug */,
+				3A3D220E1BBABBE900A7D98C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3A3D22101BBABBE900A7D98C /* Build configuration list for PBXNativeTarget "BeaconWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A3D22111BBABBE900A7D98C /* Debug */,
+				3A3D22121BBABBE900A7D98C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
