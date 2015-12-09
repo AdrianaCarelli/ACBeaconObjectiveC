@@ -16,6 +16,7 @@
 @property (strong, nonatomic)  CLBeacon *beacon;
 @property (assign, nonatomic) CLLocationAccuracy accuracy;
 @property (assign, nonatomic) BOOL detailAlreadyOpen;
+
 @property CLProximity lastProximity;
 
 
